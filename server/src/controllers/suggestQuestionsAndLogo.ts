@@ -3,7 +3,7 @@ export default ({ strapi }: { strapi: any }) => ({
     const pluginStore = strapi.store({
       environment: null,
       type: "plugin",
-      name: "faqchatbot",
+      name: "faq-AI",
     });
 
     const settings = await pluginStore.get({ key: "settings" });

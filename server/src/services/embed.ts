@@ -12,7 +12,7 @@ async function getOpenAI(strapi: Core.Strapi) {
   const pluginStore = strapi.store({
     environment: null,
     type: 'plugin',
-    name: 'faqchatbot',
+    name: 'faq-AI',
   });
 
   const settings = (await pluginStore.get({ key: 'settings' })) as PluginSettings;

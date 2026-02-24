@@ -55,11 +55,11 @@
   },
   "strapi": {
     "kind": "plugin",
-    "name": "faqchatbot",
-    "displayName": "FaqChatbot Configuration",
+    "name": "faq-AI",
+    "displayName": "faq-AI Configuration",
     "description": "A plugin for integrating ai chatbot"
   },
-  "name": "strapi-plugin-faqchatbot",
+  "name": "strapi-plugin-faq-AI",
   "description": "A plugin for integrating ai chatbot",
   "license": "MIT",
   "repository": {

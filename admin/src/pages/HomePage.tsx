@@ -59,7 +59,7 @@ const HomePage = () => {
 
   const init = async () => {
     try {
-      const { data } = await get('/faqchatbot/collections');
+      const { data } = await get('/faq-AI/collections');
       const settings = data.settings || {};
       const savedConfig = settings.config || {};
       const savedStyles = settings.cardStyles || {}; // Added from friend's update
@@ -193,7 +193,7 @@ const HomePage = () => {
         if (item.cardStyle) stylesToSave[item.uid] = item.cardStyle; // Added from friend's update
       });
 
-      await post('/faqchatbot/collections', {
+      await post('/faq-AI/collections', {
         config: configToSave,
         cardStyles: stylesToSave,
         openaiKey,
@@ -288,7 +288,7 @@ const HomePage = () => {
           onUpdateCardStyle={handleUpdateCardStyle}
           onAddClick={() => setActiveModal('collections')}
           isAddDisabled={
-            allContentTypes.filter((c) => c.uid !== 'plugin::faqchatbot.faqqa').length ===
+            allContentTypes.filter((c) => c.uid !== 'plugin::faq-AI.faqqa').length ===
             activeCollections.length
           }
         />
@@ -323,7 +323,7 @@ const HomePage = () => {
         onSave={handlePopupSave}
         availableCollections={allContentTypes.filter(
           (c) =>
-            c.uid !== 'plugin::faqchatbot.faqqa' &&
+            c.uid !== 'plugin::faq-AI.faqqa' &&
             !activeCollections.some((active) => active.uid === c.uid)
         )}
         initialData={
